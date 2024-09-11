@@ -1,0 +1,42 @@
+
+.ContactDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ContactDiv  h2 {
+    font-size: 30;
+}
+
+.profilesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+  }
+
+.profilesContainer img {
+    height: 70px;
+    width: 70px;
+    width: 100%;
+}
+
+.profilesContainer h4 {
+    font-size: 20px;
+}
+
+.github {
+    filter: invert(0.5);
+}
+
+@media only screen and (max-width: 700px) {
+    .PhoneAndEmailContainer{
+        width: 100vw;
+        text-align: center;
+    }
+}

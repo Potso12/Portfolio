@@ -1,0 +1,33 @@
+.star {
+    font-size: 24px; /* Adjust size as needed */
+    position: relative;
+    display: inline-block;
+  }
+  
+  .half-star::before {
+    position: absolute;
+    left: 0;
+    width: 20%;
+    overflow: hidden;
+  }
+
+.skillContainer-1 span {
+    color: red;
+}
+
+.skillContainer-2 span {
+    color: orange;
+}
+
+.skillContainer-3 span {
+    color: yellow;
+}
+
+.skillContainer-4 span {
+    color: #d9ff0d;
+}
+
+.skillContainer-5 span {
+    color: lime;
+}
+  
