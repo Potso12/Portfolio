@@ -1,5 +1,4 @@
 import { Skill } from "../types/types"
-import { useState} from 'react'
 import { Tooltip } from "react-tooltip";
 import './styles/Skill.css'
 import SkillStars from "../components/SkillStars";
@@ -20,6 +19,7 @@ return (
             <div 
             className="skillContainer" 
             key={index}>
+                {/*eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <a data-tooltip-id={"tooltip-" + skill.name}>
                     <img src={skill.logoUrl} alt={skill.name}/>
                     <SkillStars stars={skill.StarAmount}/>
