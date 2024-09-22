@@ -1,8 +1,10 @@
 
 
-import './styles/Navigationbar.css'
+import './styles/MobileNavigationbar.css'
 import { scroller } from 'react-scroll'; 
 import { useState } from "react"
+import { motion } from "framer-motion"
+
 
 interface MobileNavigationbarProps {
     scrollToSection: (sectionName: string) => void
@@ -31,26 +33,32 @@ const MobileNavigaitonBar: React.FC<MobileNavigationbarProps> = () => {
             alt='Menu'
             onClick={handleMenuClick}
         />
-        {isOpen && <ul className='mobileLinks'>
-            <li>
-                <a href="#Home" onClick={() => scrollToSection('Home')}>Start</a>
-            </li>
-            <li>
-                <a href="#About" onClick={() => scrollToSection('About')}>Who am I</a>
-            </li>
-            <li>
-                <a href="#Courses" onClick={() => scrollToSection('Courses')}>My studies</a>
-            </li>
-            <li>
-                <a href="#Projects" onClick={() => scrollToSection('Projects')}>Projects</a>
-            </li>
-            <li>
-                <a href="#Skills" onClick={() => scrollToSection('Skills')}>My Skills</a>
-            </li>
-            <li>
-                <a href="#Contact" onClick={() => scrollToSection('Contact')}>Contact me</a>
-            </li>
-        </ul>}
+        <motion.ul
+            className='Slider'
+            initial={{ x: '-150%' }}
+            animate={{ x: isOpen ? '0%' : '-150%' }}
+            transition={{ duration: 0.5 }}
+            >
+                <li>
+                    <a href="#Home" onClick={() => scrollToSection('Home')}>Start</a>
+                </li>
+                <li>
+                    <a href="#About" onClick={() => scrollToSection('About')}>Who am I</a>
+                </li>
+
+                <li>
+                    <a href="#Projects" onClick={() => scrollToSection('Projects')}>Projects</a>
+                </li>
+                <li>
+                    <a href="#Skills" onClick={() => scrollToSection('Skills')}>My Skills</a>
+                </li>
+                <li>
+                    <a href="#Summary" onClick={() => scrollToSection('Summary')}>Summary</a>
+                </li>
+                <li>
+                    <a href="#Contact" onClick={() => scrollToSection('Contact')}>Contact me</a>
+                </li>
+        </motion.ul>
     </div>
 )}
 
