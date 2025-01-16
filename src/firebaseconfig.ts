@@ -2,9 +2,9 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from '@firebase/firestore';
 import { collection, getDocs } from 'firebase/firestore';
 import { Skill } from './types/types';
+import 'dotenv/config'
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// should use env variables I know
 const firebaseConfig = {
   apiKey:  "AIzaSyCncH5yKUpUkQMTrElPYdjREjP4hUy7FSs",// process.env.apiKey,
   authDomain: "portfolio-2db6d.firebaseapp.com",//process.env.authDomain,
