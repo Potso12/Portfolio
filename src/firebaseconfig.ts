@@ -2,8 +2,6 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from '@firebase/firestore';
 import { collection, getDocs } from 'firebase/firestore';
 import { Skill } from './types/types';
-import 'dotenv/config'
-
 // should use env variables I know
 const firebaseConfig = {
   apiKey:  "AIzaSyCncH5yKUpUkQMTrElPYdjREjP4hUy7FSs",// process.env.apiKey,

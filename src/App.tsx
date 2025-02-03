@@ -23,8 +23,6 @@ function App() {
   const [isMobile, setIsMobile] = useState<Boolean>(false)
 
 
-
-
   useEffect(() => {
 
     const fetchSkillsData = async () => {
